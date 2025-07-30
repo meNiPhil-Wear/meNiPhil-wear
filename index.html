@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>meNiPhil Wear</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #000000;
+      --purple: #9929EA;
+      --fuchsia: #CC66DA;
+      --yellow: #FAEB92;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-color: var(--black);
+      color: white;
+    }
+
+    header {
+      background-color: var(--purple);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 500;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+      text-align: center;
+      background: linear-gradient(to bottom right, var(--purple), var(--fuchsia));
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background-color: var(--yellow);
+      color: var(--black);
+      padding: 1rem 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: white;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 4rem 2rem;
+      background-color: var(--black);
+    }
+
+    .category {
+      width: 280px;
+      margin: 1rem;
+      background-color: var(--fuchsia);
+      color: var(--black);
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .category:hover {
+      transform: translateY(-5px);
+      background-color: var(--yellow);
+    }
+
+    .about-preview {
+      padding: 4rem 2rem;
+      background-color: var(--purple);
+      color: white;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #111;
+      color: #aaa;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">meNiPhil Wear</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Style That Speaks</h1>
+    <p>Bold streetwear for the streets, the stage, and the squad. Shop sweatpants, tees & jumpers now.</p>
+    <a href="#" class="btn">Shop Now</a>
+  </section>
+
+  <section class="categories">
+    <div class="category">
+      <h2>T-Shirts</h2>
+      <p>Clean, comfy, and bold — a must-have for your daily drip.</p>
+    </div>
+    <div class="category">
+      <h2>Jumpers</h2>
+      <p>Stay warm and stylish with our trendy urban jumpers.</p>
+    </div>
+    <div class="category">
+      <h2>Sweatpants</h2>
+      <p>Whether you're chilling or moving, do it in style.</p>
+    </div>
+  </section>
+
+  <section class="about-preview">
+    <h2>About meNiPhil Wear</h2>
+    <p>Designed for youth, parents & orgs with style — at prices that don’t break the bank.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 meNiPhil Wear. All rights reserved. | Follow us on IG, X, FB
+  </footer>
+</body>
+</html>
