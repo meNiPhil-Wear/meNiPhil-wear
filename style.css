@@ -1,0 +1,59 @@
+/* Base styles remain unchanged above this point */
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px 10px 0 0;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .category-grid,
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category-card,
+  .product-card {
+    width: 90%;
+  }
+
+  .product-grid {
+    gap: 30px;
+  }
+
+  .btn {
+    padding: 12px 30px;
+  }
+
+  .cta h2 {
+    font-size: 1.8rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+
+  .socials {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
