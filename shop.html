@@ -4,7 +4,158 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shop | meNiPhil Wear</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000000;
+      color: #FAEB92;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #9929EA;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #FAEB92;
+    }
+
+    nav a {
+      color: #FAEB92;
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
+    /* Shop Header */
+    .shop-header {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #CC66DA;
+    }
+
+    .filters {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .filter-btn {
+      background-color: #9929EA;
+      color: #FAEB92;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .filter-btn:hover {
+      background-color: #CC66DA;
+    }
+
+    .shop-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product-card {
+      background-color: #1a1a1a;
+      color: #fff;
+      width: 220px;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .product-img {
+      background-color: #9929EA;
+      height: 180px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      color: #FAEB92;
+    }
+
+    .btn {
+      background-color: #FAEB92;
+      color: #000000;
+      padding: 10px 20px;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    .pagination {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .page-btn {
+      color: #FAEB92;
+      text-decoration: none;
+      background-color: #9929EA;
+      padding: 10px 15px;
+      margin: 0 5px;
+      border-radius: 5px;
+    }
+
+    .page-btn.active {
+      background-color: #CC66DA;
+    }
+
+    footer {
+      background-color: #000000;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .socials a {
+      color: #FAEB92;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 10px 0 0;
+      }
+
+      .shop-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -52,7 +203,6 @@
       <p>Ksh 1,000</p>
       <a href="#" class="btn">Add to Cart</a>
     </div>
-    <!-- Add more products as needed -->
   </section>
 
   <!-- Pagination -->
