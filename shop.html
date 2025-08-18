@@ -1,225 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop | meNiPhil Wear</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #000000;
-      color: #FAEB92;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background-color: #9929EA;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #FAEB92;
-    }
-
-    nav a {
-      color: #FAEB92;
-      margin-left: 15px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav a.active {
-      text-decoration: underline;
-    }
-
-    /* Shop Header */
-    .shop-header {
-      text-align: center;
-      padding: 40px 20px;
-      background-color: #CC66DA;
-    }
-
-    .filters {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .filter-btn {
-      background-color: #9929EA;
-      color: #FAEB92;
-      border: none;
-      padding: 10px 20px;
-      margin: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-
-    .filter-btn:hover {
-      background-color: #CC66DA;
-    }
-
-    .shop-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .product-card {
-      background-color: #1a1a1a;
-      color: #fff;
-      width: 220px;
-      padding: 15px;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .product-img {
-      background-color: #9929EA;
-      height: 180px;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-      color: #FAEB92;
-    }
-
-    .btn {
-      background-color: #FAEB92;
-      color: #000000;
-      padding: 10px 20px;
-      display: inline-block;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-
-    .pagination {
-      text-align: center;
-      margin: 30px 0;
-    }
-
-    .page-btn {
-      color: #FAEB92;
-      text-decoration: none;
-      background-color: #9929EA;
-      padding: 10px 15px;
-      margin: 0 5px;
-      border-radius: 5px;
-    }
-
-    .page-btn.active {
-      background-color: #CC66DA;
-    }
-
-    footer {
-      background-color: #000000;
-      padding: 20px;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    .socials a {
-      color: #FAEB92;
-      text-decoration: none;
-      margin: 0 5px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        margin-top: 10px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px 10px 0 0;
-      }
-
-      .shop-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phil Wear | Shop</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #000000, #9929EA);
+            color: #FAEB92;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            color: #FAEB92;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #FAEB92;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #CC66DA;
+        }
+        .shop-header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #000000, #9929EA, #CC66DA);
+        }
+        .shop-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #9929EA, #CC66DA, #FAEB92);
+        }
+        .product-card {
+            background: rgba(0,0,0,0.6);
+            color: #FAEB92;
+            width: 250px;
+            margin: 15px;
+            border-radius: 10px;
+            text-align: center;
+            padding: 15px;
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product-card h3 {
+            margin: 15px 0 10px;
+        }
+        .price {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        .btn {
+            background: #FAEB92;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #CC66DA;
+            color: #fff;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            color: #FAEB92;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <header>
-    <div class="logo">meNiPhil Wear</div>
+<header>
+    <h1>Phil Wear</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="shop.html" class="active">Shop</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
-  </header>
+</header>
 
-  <!-- Shop Header -->
-  <section class="shop-header">
-    <h1>Shop Our Collection</h1>
-    <p>Urban fashion made simple – Find your next look below.</p>
-  </section>
+<section class="shop-header">
+    <h2>Our Collection</h2>
+    <p>Affordable, stylish, and trendy wear for everyone.</p>
+</section>
 
-  <!-- Filter Section -->
-  <section class="filters">
-    <button class="filter-btn">All</button>
-    <button class="filter-btn">T-Shirts</button>
-    <button class="filter-btn">Jumpers</button>
-    <button class="filter-btn">Sweatpants</button>
-  </section>
-
-  <!-- Product Grid -->
-  <section class="shop-grid">
+<section class="products">
     <div class="product-card">
-      <div class="product-img">Image</div>
-      <h3>Black Street Tee</h3>
-      <p>Ksh 800</p>
-      <a href="#" class="btn">Add to Cart</a>
+        <img src="https://via.placeholder.com/250x200" alt="T-shirt">
+        <h3>Classic T-Shirt</h3>
+        <p class="price">KES 1,000</p>
+        <a href="#" class="btn">Add to Cart</a>
     </div>
     <div class="product-card">
-      <div class="product-img">Image</div>
-      <h3>Purple Oversized Jumper</h3>
-      <p>Ksh 1,200</p>
-      <a href="#" class="btn">Add to Cart</a>
+        <img src="https://via.placeholder.com/250x200" alt="Jumper">
+        <h3>Stylish Jumper</h3>
+        <p class="price">KES 2,000</p>
+        <a href="#" class="btn">Add to Cart</a>
     </div>
     <div class="product-card">
-      <div class="product-img">Image</div>
-      <h3>Classic Grey Sweatpants</h3>
-      <p>Ksh 1,000</p>
-      <a href="#" class="btn">Add to Cart</a>
+        <img src="https://via.placeholder.com/250x200" alt="Sweatpants">
+        <h3>Comfy Sweatpants</h3>
+        <p class="price">KES 1,500</p>
+        <a href="#" class="btn">Add to Cart</a>
     </div>
-  </section>
+</section>
 
-  <!-- Pagination -->
-  <section class="pagination">
-    <a href="#" class="page-btn active">1</a>
-    <a href="#" class="page-btn">2</a>
-    <a href="#" class="page-btn">3</a>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 meNiPhil Wear</p>
-    <div class="socials">
-      <a href="#">Instagram</a> |
-      <a href="#">Facebook</a> |
-      <a href="#">WhatsApp</a>
-    </div>
-  </footer>
+<footer>
+    <p>&copy; 2025 Phil Wear. All rights reserved.</p>
+</footer>
 </body>
 </html>
