@@ -1,223 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | meNiPhil Wear</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #000000;
-      color: #FAEB92;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phil Wear | Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background-color: #9929EA;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #FAEB92;
-    }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #000000, #9929EA);
+            color: #FAEB92;
+            overflow-x: hidden;
+        }
 
-    nav a {
-      color: #FAEB92;
-      margin-left: 15px;
-      text-decoration: none;
-      font-weight: 500;
-    }
+        header {
+            background: rgba(0, 0, 0, 0.85);
+            color: #FAEB92;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-    nav a.active {
-      text-decoration: underline;
-    }
+        header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+        }
 
-    /* Hero Section */
-    .hero {
-      background-color: #CC66DA;
-      text-align: center;
-      padding: 60px 20px;
-    }
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
 
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 15px;
-    }
+        nav ul li {
+            margin-left: 20px;
+        }
 
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
+        nav ul li a {
+            text-decoration: none;
+            color: #FAEB92;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-    .btn {
-      background-color: #FAEB92;
-      color: #000000;
-      padding: 12px 24px;
-      display: inline-block;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-    }
+        nav ul li a:hover {
+            color: #CC66DA;
+        }
 
-    /* Featured Products */
-    .featured {
-      padding: 40px 20px;
-      text-align: center;
-    }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #000000, #9929EA, #CC66DA);
+            color: #FAEB92;
+        }
 
-    .featured h2 {
-      margin-bottom: 20px;
-      font-size: 2rem;
-    }
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
 
-    .product-grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
 
-    .product-card {
-      background-color: #1a1a1a;
-      color: #fff;
-      width: 220px;
-      padding: 15px;
-      border-radius: 10px;
-      text-align: center;
-    }
+        .btn {
+            display: inline-block;
+            background: #FAEB92;
+            color: #000;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
 
-    .product-img {
-      background-color: #9929EA;
-      height: 180px;
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-      color: #FAEB92;
-    }
+        .btn:hover {
+            background: #CC66DA;
+            color: #fff;
+        }
 
-    /* About Section */
-    .about-home {
-      background-color: #000000;
-      padding: 40px 20px;
-      text-align: center;
-    }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #9929EA, #CC66DA, #FAEB92);
+        }
 
-    .about-home h2 {
-      margin-bottom: 15px;
-    }
+        .feature {
+            flex: 1 1 250px;
+            max-width: 300px;
+            margin: 15px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #FAEB92;
+            border-radius: 8px;
+            text-align: center;
+        }
 
-    .about-home p {
-      max-width: 700px;
-      margin: 0 auto 20px auto;
-      line-height: 1.6;
-    }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            color: #FAEB92;
+        }
 
-    /* Footer */
-    footer {
-      background-color: #000000;
-      padding: 20px;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    .socials a {
-      color: #FAEB92;
-      text-decoration: none;
-      margin: 0 5px;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav {
-        margin-top: 10px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px 10px 0 0;
-      }
-
-      .product-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .hero h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <header>
-    <div class="logo">meNiPhil Wear</div>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="shop.html">Shop</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <h1>Phil Wear</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Streetwear for the Bold</h1>
-    <p>Casual, stylish, and affordable fashion for every day.</p>
-    <a href="shop.html" class="btn">Shop Now</a>
-  </section>
+    <section class="hero">
+        <h2>BOLD. URBAN. YOU.</h2>
+        <p>Casual wear for real people – t-shirts, jumpers, and sweatpants that fit your life.</p>
+        <a href="shop.html" class="btn">Shop Now</a>
+    </section>
 
-  <!-- Featured Products -->
-  <section class="featured">
-    <h2>Featured Picks</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <div class="product-img">Image</div>
-        <h3>Black Street Tee</h3>
-        <p>Ksh 800</p>
-        <a href="shop.html" class="btn">View</a>
-      </div>
-      <div class="product-card">
-        <div class="product-img">Image</div>
-        <h3>Purple Jumper</h3>
-        <p>Ksh 1,200</p>
-        <a href="shop.html" class="btn">View</a>
-      </div>
-      <div class="product-card">
-        <div class="product-img">Image</div>
-        <h3>Classic Grey Sweatpants</h3>
-        <p>Ksh 1,000</p>
-        <a href="shop.html" class="btn">View</a>
-      </div>
-    </div>
-  </section>
+    <section class="features">
+        <div class="feature">
+            <h3>T-Shirts</h3>
+            <p>Trendy designs and comfortable fits for all-day wear.</p>
+        </div>
+        <div class="feature">
+            <h3>Jumpers</h3>
+            <p>Stay warm and stylish with our vibrant collection.</p>
+        </div>
+        <div class="feature">
+            <h3>Sweatpants</h3>
+            <p>Perfect balance of comfort and streetwear vibes.</p>
+        </div>
+    </section>
 
-  <!-- About Preview -->
-  <section class="about-home">
-    <h2>About Us</h2>
-    <p>
-      At meNiPhil Wear, we believe in making urban fashion affordable for everyone.
-      Our collection blends comfort, style, and bold colors for youth and trendsetters alike.
-    </p>
-    <a href="about.html" class="btn">Learn More</a>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 meNiPhil Wear</p>
-    <div class="socials">
-      <a href="#">Instagram</a> |
-      <a href="#">Facebook</a> |
-      <a href="#">WhatsApp</a>
-    </div>
-  </footer>
+    <footer>
+        <p>&copy; 2025 Phil Wear. All rights reserved.</p>
+    </footer>
 </body>
 </html>
